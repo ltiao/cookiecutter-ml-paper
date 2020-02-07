@@ -20,15 +20,20 @@
 
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{xr-hyper}
 \usepackage{hyperref}       % hyperlinks
+\usepackage{cleveref}
 \usepackage{url}            % simple URL typesetting
 \usepackage{booktabs}       % professional-quality tables
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 
+\externaldocument[supp:]{supplemental}
+\newcommand{\crefsupp}[1]{\cref{supp:#1} of the supplemental material}
+
 \title{
-  test
+  {{cookiecutter.paper_title}}
 }
 
 % The \author macro works with any number of authors. There are two commands
@@ -46,7 +51,9 @@
   Department of Computer Science\\
   Cranberry-Lemon University\\
   Pittsburgh, PA 15213 \\
-  \texttt{hippo@cs.cranberry-lemon.edu} \\
+  \texttt{
+    {{cookiecutter.email}}
+  }
 }
 
 \begin{document}
@@ -70,7 +77,12 @@ NeurIPS requires electronic submissions.  The electronic submission site is
 
 Please read the instructions below carefully and follow them faithfully.
 
+\subsection{Referencing the Supplemental Material}
+
+For example, we can refer the reader to \crefsupp{sub:experiments_on_dataset_a}.
+
 \subsection{Style}
+\label{sub:style}
 
 Papers to be submitted to NeurIPS 2019 must be prepared according to the
 instructions presented here. Papers may only be up to eight pages long,
