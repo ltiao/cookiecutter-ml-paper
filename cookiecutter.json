@@ -2,6 +2,5 @@
   "author": "David S.~Hippocampus",
   "email": "hippo@cs.cranberry-lemon.edu",
   "paper_title": "Formatting Instructions For NeurIPS 2019",
-  "paper_slug": "{{ cookiecutter.paper_title.lower().replace(' ', '-') }}",
-  "paper_abstract": "Paper Boilerplate contains all the boilerplate you need to create a paper."
+  "paper_shortname": "{{ cookiecutter.paper_title.lower().replace(' ', '-') }}",
 }
