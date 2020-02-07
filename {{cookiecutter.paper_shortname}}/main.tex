@@ -45,15 +45,21 @@
 % \AND instead of \And before the third author name.
 
 \author{
-  {{cookiecutter.author}}\thanks{Use footnote for providing further information
-    about author (webpage, alternative address)---\emph{not} for acknowledging
-    funding agencies.} \\
-  Department of Computer Science\\
-  Cranberry-Lemon University\\
-  Pittsburgh, PA 15213 \\
+{% for author_full_name, author_details in cookiecutter.authors.items() %}
+  {{author_full_name}}
+  {%- if author_details.info is defined -%}
+    \thanks{
+      {{author_details.info}}
+    }
+  {%- endif -%} \\
+  {{author_details.address}} \\
   \texttt{
-    {{cookiecutter.email}}
+    {{author_details.email}}
   }
+  {%+ if not loop.last -%}
+    {{ loop.cycle('\And', '\AND') }}
+  {%+ endif -%}
+{% endfor %}
 }
 
 \begin{document}

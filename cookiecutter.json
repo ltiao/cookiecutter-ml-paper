@@ -1,6 +1,27 @@
 {
-  "author": "David S.~Hippocampus",
-  "email": "hippo@cs.cranberry-lemon.edu",
   "paper_title": "Formatting Instructions For NeurIPS 2019",
-  "paper_shortname": "{{ cookiecutter.paper_title.lower().replace(' ', '-') }}"
+  "paper_shortname": "{{ cookiecutter.paper_title.lower().replace(' ', '-') }}",
+  "authors": {
+    "David S.~Hippocampus": {
+      "email": "hippo@cs.cranberry-lemon.edu",
+      "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213"
+    },
+    "Aeiau Zzzz": {
+        "email": "louis.tiao@sydney.edu.au",
+        "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213",
+        "info": "Use footnote for providing further information about author (webpage, alternative address)---\\emph{not} for acknowledging funding agencies."
+    },
+    "Bauiu C.~Yyyy": {
+        "email": "louis.tiao@sydney.edu.au",
+        "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213"
+    },
+    "Cieua Vvvvv": {
+        "email": "louis.tiao@sydney.edu.au",
+        "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213"
+    },
+    "Iaesut Saoeu": {
+        "email": "louis.tiao@sydney.edu.au",
+        "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213"
+    }
+  }
 }
