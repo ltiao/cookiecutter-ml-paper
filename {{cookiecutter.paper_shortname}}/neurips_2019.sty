@@ -59,19 +59,19 @@
 
 % handle tweaks for camera-ready copy vs. submission copy
 \if@preprint
-  \newcommand{\@noticestring}{
-    Preprint. Under review.
+  \newcommand{\@noticestring}{%
+    Preprint. Under review.%
   }
 \else
   \if@neuripsfinal
-    \newcommand{\@noticestring}{
+    \newcommand{\@noticestring}{%
       \@neuripsordinal\/ Conference on Neural Information Processing Systems
-      (NeurIPS \@neuripsyear), \@neuripslocation.
+      (NeurIPS \@neuripsyear), \@neuripslocation.%
     }
   \else
-    \newcommand{\@noticestring}{
+    \newcommand{\@noticestring}{%
       Submitted to \@neuripsordinal\/ Conference on Neural Information
-      Processing Systems (NeurIPS \@neuripsyear). Do not distribute.
+      Processing Systems (NeurIPS \@neuripsyear). Do not distribute.%
     }
 
     % line numbers for submission
@@ -81,25 +81,25 @@
     % fix incompatibilities between lineno and amsmath, if required, by
     % transparently wrapping linenomath environments around amsmath
     % environments
-    \AtBeginDocument{
-      \@ifpackageloaded{amsmath}{
-        \newcommand*\patchAmsMathEnvironmentForLineno[1]{
+    \AtBeginDocument{%
+      \@ifpackageloaded{amsmath}{%
+        \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
           \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
           \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
-          \renewenvironment{{ "{" }}#1{{ "}" }}
-                           {\linenomath\csname old#1\endcsname}
-                           {\csname oldend#1\endcsname\endlinenomath}
-        }
-        \newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{
-          \patchAmsMathEnvironmentForLineno{{ "{" }}#1{{ "}" }}
-          \patchAmsMathEnvironmentForLineno{{ "{" }}#1*{{ "}" }}
+          \renewenvironment{#1}%
+                           {\linenomath\csname old#1\endcsname}%
+                           {\csname oldend#1\endcsname\endlinenomath}%
         }%
-        \patchBothAmsMathEnvironmentsForLineno{equation}
-        \patchBothAmsMathEnvironmentsForLineno{align}
-        \patchBothAmsMathEnvironmentsForLineno{flalign}
-        \patchBothAmsMathEnvironmentsForLineno{alignat}
-        \patchBothAmsMathEnvironmentsForLineno{gather}
-        \patchBothAmsMathEnvironmentsForLineno{multline}
+        \newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
+          \patchAmsMathEnvironmentForLineno{#1}%
+          \patchAmsMathEnvironmentForLineno{#1*}%
+        }%
+        \patchBothAmsMathEnvironmentsForLineno{equation}%
+        \patchBothAmsMathEnvironmentsForLineno{align}%
+        \patchBothAmsMathEnvironmentsForLineno{flalign}%
+        \patchBothAmsMathEnvironmentsForLineno{alignat}%
+        \patchBothAmsMathEnvironmentsForLineno{gather}%
+        \patchBothAmsMathEnvironmentsForLineno{multline}%
       }{}
     }
   \fi
@@ -132,7 +132,7 @@
 \sloppy
 
 % font sizes with reduced leading
-\renewcommand{\normalsize}{
+\renewcommand{\normalsize}{%
   \@setfontsize\normalsize\@xpt\@xipt
   \abovedisplayskip      7\p@ \@plus 2\p@ \@minus 5\p@
   \abovedisplayshortskip \z@ \@plus 3\p@
@@ -140,7 +140,7 @@
   \belowdisplayshortskip 4\p@ \@plus 3\p@ \@minus 3\p@
 }
 \normalsize
-\renewcommand{\small}{
+\renewcommand{\small}{%
   \@setfontsize\small\@ixpt\@xpt
   \abovedisplayskip      6\p@ \@plus 1.5\p@ \@minus 4\p@
   \abovedisplayshortskip \z@  \@plus 2\p@
@@ -158,43 +158,43 @@
 
 % sections with less space
 \providecommand{\section}{}
-\renewcommand{\section}{
+\renewcommand{\section}{%
   \@startsection{section}{1}{\z@}%
-                {-2.0ex \@plus -0.5ex \@minus -0.2ex}
-                { 1.5ex \@plus  0.3ex \@minus  0.2ex}
-                {\large\bf\raggedright}
+                {-2.0ex \@plus -0.5ex \@minus -0.2ex}%
+                { 1.5ex \@plus  0.3ex \@minus  0.2ex}%
+                {\large\bf\raggedright}%
 }
 \providecommand{\subsection}{}
-\renewcommand{\subsection}{
-  \@startsection{subsection}{2}{\z@}
-                {-1.8ex \@plus -0.5ex \@minus -0.2ex}
-                { 0.8ex \@plus  0.2ex}
-                {\normalsize\bf\raggedright}
+\renewcommand{\subsection}{%
+  \@startsection{subsection}{2}{\z@}%
+                {-1.8ex \@plus -0.5ex \@minus -0.2ex}%
+                { 0.8ex \@plus  0.2ex}%
+                {\normalsize\bf\raggedright}%
 }
 \providecommand{\subsubsection}{}
-\renewcommand{\subsubsection}{
-  \@startsection{subsubsection}{3}{\z@}
-                {-1.5ex \@plus -0.5ex \@minus -0.2ex}
-                { 0.5ex \@plus  0.2ex}
-                {\normalsize\bf\raggedright}
+\renewcommand{\subsubsection}{%
+  \@startsection{subsubsection}{3}{\z@}%
+                {-1.5ex \@plus -0.5ex \@minus -0.2ex}%
+                { 0.5ex \@plus  0.2ex}%
+                {\normalsize\bf\raggedright}%
 }
 \providecommand{\paragraph}{}
-\renewcommand{\paragraph}{
-  \@startsection{paragraph}{4}{\z@}
-                {1.5ex \@plus 0.5ex \@minus 0.2ex}
-                {-1em}
-                {\normalsize\bf}
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{\z@}%
+                {1.5ex \@plus 0.5ex \@minus 0.2ex}%
+                {-1em}%
+                {\normalsize\bf}%
 }
 \providecommand{\subparagraph}{}
-\renewcommand{\subparagraph}{
-  \@startsection{subparagraph}{5}{\z@}
-                {1.5ex \@plus 0.5ex \@minus 0.2ex}
-                {-1em}
-                {\normalsize\bf}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{\z@}%
+                {1.5ex \@plus 0.5ex \@minus 0.2ex}%
+                {-1em}%
+                {\normalsize\bf}%
 }
 \providecommand{\subsubsubsection}{}
-\renewcommand{\subsubsubsection}{
-  \vskip5pt{\noindent\normalsize\rm\raggedright}
+\renewcommand{\subsubsubsection}{%
+  \vskip5pt{\noindent\normalsize\rm\raggedright}%
 }
 
 % float placement
@@ -211,8 +211,8 @@
 
 % swap above/belowcaptionskip lengths for tables
 \renewenvironment{table}
-  {\setlength{\abovecaptionskip}{\@neuripsbelowcaptionskip}
-   \setlength{\belowcaptionskip}{\@neuripsabovecaptionskip}
+  {\setlength{\abovecaptionskip}{\@neuripsbelowcaptionskip}%
+   \setlength{\belowcaptionskip}{\@neuripsabovecaptionskip}%
    \@float{table}}
   {\end@float}
 
@@ -263,7 +263,7 @@
 
 % create title
 \providecommand{\maketitle}{}
-\renewcommand{\maketitle}{
+\renewcommand{\maketitle}{%
   \par
   \begingroup
     \renewcommand{\thefootnote}{\fnsymbol{footnote}}
@@ -271,7 +271,7 @@
     \renewcommand{\@makefnmark}{\hbox to \z@{$^{\@thefnmark}$\hss}}
     % The footnote-mark was overlapping the footnote-text,
     % added the following to fix this problem               (MK)
-    \long\def\@makefntext##1{
+    \long\def\@makefntext##1{%
       \parindent 1em\noindent
       \hbox to 1.8em{\hss $\m@th ^{\@thefnmark}$}##1
     }
@@ -288,19 +288,19 @@
 \newcommand{\@toptitlebar}{
   \hrule height 4\p@
   \vskip 0.25in
-  \vskip -\parskip
+  \vskip -\parskip%
 }
 \newcommand{\@bottomtitlebar}{
   \vskip 0.29in
   \vskip -\parskip
   \hrule height 1\p@
-  \vskip 0.09in
+  \vskip 0.09in%
 }
 
 % create title (includes both anonymized and non-anonymized versions)
 \providecommand{\@maketitle}{}
-\renewcommand{\@maketitle}{
-  \vbox{
+\renewcommand{\@maketitle}{%
+  \vbox{%
     \hsize\textwidth
     \linewidth\hsize
     \vskip 0.1in
@@ -314,17 +314,17 @@
         Affiliation \\
         Address \\
         \texttt{email} \\
-      \end{tabular}
+      \end{tabular}%
     \else
-      \def\And{
-        \end{tabular}\hfil\linebreak[0]\hfil
-        \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces
+      \def\And{%
+        \end{tabular}\hfil\linebreak[0]\hfil%
+        \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
       }
-      \def\AND{
-        \end{tabular}\hfil\linebreak[4]\hfil
-        \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces
+      \def\AND{%
+        \end{tabular}\hfil\linebreak[4]\hfil%
+        \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
       }
-      \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}
+      \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}%
     \fi
     \vskip 0.3in \@minus 0.1in
   }
@@ -332,27 +332,27 @@
 
 % add conference notice to bottom of first page
 \newcommand{\ftype@noticebox}{8}
-\newcommand{\@notice}{
+\newcommand{\@notice}{%
   % give a bit of extra room back to authors on first page
-  \enlargethispage{2\baselineskip}
-  \@float{noticebox}[b]
-    \footnotesize\@noticestring
-  \end@float
+  \enlargethispage{2\baselineskip}%
+  \@float{noticebox}[b]%
+    \footnotesize\@noticestring%
+  \end@float%
 }
 
 % abstract styling
-\renewenvironment{abstract}
-{
-  \vskip 0.075in
-  \centerline
-  {\large\bf Abstract}
-  \vspace{0.5ex}
-  \begin{quote}
+\renewenvironment{abstract}%
+{%
+  \vskip 0.075in%
+  \centerline%
+  {\large\bf Abstract}%
+  \vspace{0.5ex}%
+  \begin{quote}%
 }
 {
-  \par
-  \end{quote}
-  \vskip 1ex
+  \par%
+  \end{quote}%
+  \vskip 1ex%
 }
 
 \endinput

@@ -7,21 +7,25 @@
       "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213"
     },
     "Aeiau Zzzz": {
-        "email": "louis.tiao@sydney.edu.au",
-        "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213",
-        "info": "Use footnote for providing further information about author (webpage, alternative address)---\\emph{not} for acknowledging funding agencies."
+      "email": "hippo@cs.cranberry-lemon.edu",
+      "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213",
+      "info": "Use footnote for providing further information about author (webpage, alternative address)---\\emph{not} for acknowledging funding agencies."
     },
     "Bauiu C.~Yyyy": {
-        "email": "louis.tiao@sydney.edu.au",
-        "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213"
+      "email": "hippo@cs.cranberry-lemon.edu",
+      "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213"
     },
     "Cieua Vvvvv": {
-        "email": "louis.tiao@sydney.edu.au",
-        "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213"
+      "email": "hippo@cs.cranberry-lemon.edu",
+      "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213"
     },
     "Iaesut Saoeu": {
-        "email": "louis.tiao@sydney.edu.au",
-        "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213"
+      "email": "hippo@cs.cranberry-lemon.edu",
+      "address": "Department of Computer Science\\\\\nCranberry-Lemon University\\\\\nPittsburgh, PA 15213"
     }
-  }
+  },
+  "_copy_without_render": [
+    "*.sty",
+    "*.bib"
+  ]
 }
