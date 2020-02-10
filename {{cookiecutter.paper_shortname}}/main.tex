@@ -18,24 +18,9 @@
 % to avoid loading the natbib package, add option nonatbib:
 % \usepackage[nonatbib]{neurips_2019}
 
-\usepackage[utf8]{inputenc} % allow utf-8 input
-\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage{xr-hyper}
-\usepackage[colorlinks]{hyperref}       % hyperlinks
-\usepackage{url}            % simple URL typesetting
-\usepackage{booktabs}       % professional-quality tables
-\usepackage{amsfonts}       % blackboard math symbols
-\usepackage{nicefrac}       % compact symbols for 1/2, etc.
-\usepackage{microtype}      % microtypography
-\usepackage{cleveref}
-
-\hypersetup{citecolor=NavyBlue}
-\hypersetup{linkcolor=NavyBlue}
-\hypersetup{urlcolor=NavyBlue}
-
-\externaldocument[supp:]{supplemental}
-\newcommand{\crefsupp}[1]{\cref{supp:#1} of the supplemental material}
+\input{preamble/base}
+\input{preamble/acronyms}
+\input{preamble/main}
 
 \title{
   {{cookiecutter.paper_title}}
@@ -88,9 +73,9 @@ NeurIPS requires electronic submissions.  The electronic submission site is
 
 Please read the instructions below carefully and follow them faithfully.
 
-\subsection{Referencing the Supplemental Material}
+\subsection{Referencing the Supplementary Material}
 
-For example, we can refer the reader to \crefsupp{sub:experiments_on_dataset_a}.
+For example, we can refer the reader to \crefsupp{sub:experiments_on_dataset_a}. This \gls{SGD}.
 
 \subsection{Style}
 \label{sub:style}
