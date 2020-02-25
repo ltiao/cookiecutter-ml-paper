@@ -1,5 +1,5 @@
 {
-  "paper_title": "Formatting Instructions For NeurIPS 2019",
+  "paper_title": "Formatting Instructions For NeurIPS 2020",
   "paper_shortname": "{{ cookiecutter.paper_title.lower().replace(' ', '-') }}",
   "authors": {
     "David S.~Hippocampus": {
@@ -29,3 +29,4 @@
     "*.bib"
   ]
 }
+
